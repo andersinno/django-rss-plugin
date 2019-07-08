@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='rssplugin',
             name='cmsplugin_ptr',
-            field=models.OneToOneField(to='cms.CMSPlugin', related_name='rssplugin_rssplugin', parent_link=True, serialize=False, primary_key=True, auto_created=True),
+            field=models.OneToOneField(to='cms.CMSPlugin', related_name='rssplugin_rssplugin', parent_link=True, serialize=False, primary_key=True, auto_created=True, on_delete=models.CASCADE),
         ),
         migrations.AlterField(
             model_name='rssplugin',

@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='RSSPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin', on_delete=models.CASCADE)),
                 ('count', models.IntegerField(default=6)),
                 ('title', models.CharField(default=b'Community News', max_length=200, null=True, help_text="If you specified this value, it will replace feed's title")),
                 ('rss_url', models.CharField(max_length=512)),
